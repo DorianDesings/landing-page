@@ -3,26 +3,34 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;1,400&display=swap" rel="stylesheet")
+    link(rel="stylesheet", href="css/styles.css")
     title Landing Page
   body
     header.header
-      .logo
-        img(src="", alt="").logo__img
-      nav.main-nav.nav
+      #top-bar.top-bar
+        .top-bar__logo
+          img(src="/assets/images/logo-bookmark.svg", alt="logo").top-bar__img
+        img(src="/assets/images/icon-hamburger.svg", alt="icon-menu")#icon-menu.top-bar__icon
+      nav#main-nav.main-nav.nav
         ul.main-menu
-          li.main-menu__item: a(href="#features") Features
-          li.main-menu__item: a(href="#faqs") FAQS
-          li.main-menu__item: a(href="#contact") Contact
+          li.main-menu__item: a(href="#features").main-menu__link Features
+          li.main-menu__item: a(href="#faqs").main-menu__link FAQS
+          li.main-menu__item: a(href="#contact").main-menu__link Contact
         button#login-button.login-button Login
+        .social-icons
+          img(src="/assets/images/icon-facebook.svg", alt="").social-icons__img
+          img(src="/assets/images/icon-twitter.svg", alt="").social-icons__img
       
     section.section.section--first
+      .section__item
+        img(src="", alt="")
       .section__item
         h1.section__title A Simple Bookmark Manager
         p.section__text A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.
         button.button Get it on Chrome
         button.button Get it on Firefox
-      .section__item
-        img(src="", alt="")
+     
     section#features.section--second
       h2.section__title Features
       p.section__text Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
@@ -93,14 +101,15 @@ html(lang="en")
       form#form.form
         input(type="email" placeholder="Enter your email address").form__input
         button.button Contact Us
-    nav.footer-nav.nav
-      .logo
-        img(src="", alt="").logo__img
-      nav.main-nav.nav
-        ul.main-menu
-          li.main-menu__item: a(href="#features") Features
-          li.main-menu__item: a(href="#faqs") FAQS
-          li.main-menu__item: a(href="#contact") Contact
-        .social-networwks
-          a(href="#"): i.fa.fa-facebook
-          a(href="#"): i.fa.fa-twitter
+    //- nav.footer-nav.nav
+    //-   .logo
+    //-     img(src="", alt="").logo__img
+    //-   nav.main-nav.nav
+    //-     ul.main-menu
+    //-       li.main-menu__item: a(href="#features") Features
+    //-       li.main-menu__item: a(href="#faqs") FAQS
+    //-       li.main-menu__item: a(href="#contact") Contact
+    //-     .social-networwks
+    //-       a(href="#"): i.fa.fa-facebook
+    //-       a(href="#"): i.fa.fa-twitter
+  script(src="js/scripts-min.js")

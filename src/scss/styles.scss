@@ -3,5 +3,12 @@
 @import 'base/base.scss';
 
 // Variables
+@import 'config/variables.scss';
 
 // Blocks
+@import 'blocks/header.scss';
+@import 'blocks/menu.scss';
+@import 'blocks/top-bar.scss';
+@import 'blocks/login-button.scss';
+@import 'blocks/social-icons.scss';
+@import 'blocks/section.scss';

@@ -1,0 +1,19 @@
+.top-bar {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 2rem;
+
+  &--show {
+    filter: invert(1) brightness(100);
+
+    & .top-bar__icon {
+      filter: invert(1) brightness(100);
+    }
+  }
+}
