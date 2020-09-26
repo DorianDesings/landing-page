@@ -1,0 +1,37 @@
+.section {
+  margin-top: 6rem;
+
+  &__title,
+  &__text {
+    text-align: center;
+    font-weight: 400;
+  }
+
+  &__text {
+    padding: 0 1.5rem;
+    font-weight: 400;
+    color: var(--grayish-blue);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  &--first {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 65px;
+      right: 0;
+      display: block;
+      width: 280px;
+      height: 200px;
+      background-color: var(--soft-blue);
+      border-bottom-left-radius: 100px;
+      z-index: -1;
+    }
+  }
+
+  &--third {
+    margin: 0 2rem;
+  }
+}

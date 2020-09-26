@@ -11,6 +11,7 @@
   flex-direction: column;
   align-items: center;
   transform: translateY(-100%);
+  z-index: 10;
 
   &--show {
     transform: translateY(0);

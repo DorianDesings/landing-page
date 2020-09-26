@@ -24,12 +24,13 @@ html(lang="en")
       
     section.section.section--first
       .section__item
-        img(src="", alt="")
+        img(src="/assets/images/illustration-hero.svg", alt="").section__img
       .section__item
         h1.section__title A Simple Bookmark Manager
         p.section__text A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.
-        button.button Get it on Chrome
-        button.button Get it on Firefox
+        .buttons
+          button.button.button--purple Get it on Chrome
+          button.button.button--white Get it on Firefox
      
     section#features.section--second
       h2.section__title Features
@@ -58,28 +59,25 @@ html(lang="en")
       p.section__text We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.
 
       article.browser-card
-        img(src="", alt="").browser-card__image
+        img(src="/assets/images/logo-chrome.svg", alt="").browser-card__image
         h3.browser-card__title Add to Chrome
         p.browser-card__description Minumum version 62
-        //Dots
-        img(src="", alt="")
-        button.button Add & install Extension
+        img(src="/assets/images/bg-dots.svg", alt="")
+        button.button.button--purple Add & install Extension
 
       article.browser-card
-        img(src="", alt="").browser-card__image
+        img(src="/assets/images/logo-firefox.svg", alt="").browser-card__image
         h3.browser-card__title Add to Firefox
         p.browser-card__description Minumum version 55
-        //Dots
-        img(src="", alt="")
-        button.button Add & install Extension
+        img(src="/assets/images/bg-dots.svg", alt="")
+        button.button.button--purple Add & install Extension
 
       article.browser-card
-        img(src="", alt="").browser-card__image
+        img(src="/assets/images/logo-opera.svg", alt="").browser-card__image
         h3.browser-card__title Add to Opera
         p.browser-card__description Minumum version 46
-        //Dots
-        img(src="", alt="")
-        button.button Add & install Extension
+        img(src="/assets/images/bg-dots.svg", alt="")
+        button.button.button--purple Add & install Extension
 
     section#faqs.section.section--fourth
       h2.section__title Frequently Asked Questions

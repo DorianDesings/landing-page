@@ -4,8 +4,11 @@
   // Colors
   --white: #fff;
   --white-soft: #ffffff44;
+  --dirty-white: #f5f5f5;
   --soft-blue: hsl(231, 69%, 60%);
   --soft-red: hsl(0, 94%, 66%);
-  --grayish--blue: hsl(229, 8%, 60%);
+  --grayish-blue: hsl(229, 8%, 60%);
   --very-dark-blue: hsla(229, 31%, 21%, 0.98);
 }
+
+$soft-blue: hsl(231, 69%, 60%);

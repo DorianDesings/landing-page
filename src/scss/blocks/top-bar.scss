@@ -6,11 +6,13 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
   padding: 2rem;
+  background-color: var(--white);
 
   &--show {
     filter: invert(1) brightness(100);
+    background-color: transparent;
 
     & .top-bar__icon {
       filter: invert(1) brightness(100);

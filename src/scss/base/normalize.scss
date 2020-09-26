@@ -34,6 +34,10 @@ body {
  * Render the `main` element consistently in IE.
  */
 
+img {
+  max-width: 100%;
+}
+
 main {
   display: block;
 }
