@@ -9,8 +9,8 @@ html(lang="en")
   body
     header.header
       #top-bar.top-bar
-        .top-bar__logo
-          img(src="/assets/images/logo-bookmark.svg", alt="logo").top-bar__img
+        .logo
+          img(src="/assets/images/logo-bookmark.svg", alt="logo")
         img(src="/assets/images/icon-hamburger.svg", alt="icon-menu")#icon-menu.top-bar__icon
       nav#main-nav.main-nav.nav
         ul.main-menu
@@ -45,6 +45,7 @@ html(lang="en")
           img(src="/assets/images/illustration-features-tab-1.svg", alt="features tab 1").tabs__image
           h2.tabs__title Bookmark in one click
           p.tabs__text Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
+        .button-container
           button.button.button--purple More Info
           
         article.tabs__content.tabs__content--second
@@ -87,36 +88,39 @@ html(lang="en")
       p.section__text Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.
       #accordion.accordion
         .accordion__item
-          .accordion__header
-            h3.accordion__title What is Bookmark
-            img(src="/assets/images/icon-arrow.svg", alt="icon arrow").accordion__image
-          p.accordion__text.accordion__text--active Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum  quam ornare mattis.
+          h3.accordion__title What is Bookmark
+          .accordion__text
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum  quam ornare mattis.
         .accordion__item
-          .accordion__header
-            h3.accordion__title How can I request a new browser?
-            img(src="/assets/images/icon-arrow.svg", alt="icon arrow").accordion__image
-          p.accordion__text Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+          h3.accordion__title How can I request a new browser?
+          .accordion__text
+            p Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
         .accordion__item
-          .accordion__header
-            h3.accordion__title What is Bookmark
-            img(src="/assets/images/icon-arrow.svg", alt="icon arrow").accordion__image
-          p.accordion__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum  quam ornare mattis.
-        button.button More Info
+          h3.accordion__title What is Bookmark
+          .accordion__text
+            p Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.
+        .accordion__item
+          h3.accordion__title What about other Chromium browsers?
+          .accordion__text
+            p Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.
+      .button-container
+        button.button.button--purple More Info
     footer.footer
-      h3.footer__title
-      p.footer__text
+      h3.footer__title 35,000+ already joined
+      p.footer__subtitle Stay up-to-date with what we’re doing
       form#form.form
-        input(type="email" placeholder="Enter your email address").form__input
-        button.button Contact Us
-    //- nav.footer-nav.nav
-    //-   .logo
-    //-     img(src="", alt="").logo__img
-    //-   nav.main-nav.nav
-    //-     ul.main-menu
-    //-       li.main-menu__item: a(href="#features") Features
-    //-       li.main-menu__item: a(href="#faqs") FAQS
-    //-       li.main-menu__item: a(href="#contact") Contact
-    //-     .social-networwks
-    //-       a(href="#"): i.fa.fa-facebook
-    //-       a(href="#"): i.fa.fa-twitter
+        .form__field
+          input(type="email" placeholder="Enter your email address").form__input
+          div.form__input-error Whoops, make sure it's an email
+        button.button.button--red Contact Us
+    nav.footer__menu
+      .logo
+        img(src="/assets/images/logo-bookmark.svg", alt="logo").logo__img
+      ul.footer-menu
+        li.footer-menu__item.footer-menu__item--border-none: a(href="#features").footer-menu__link Features
+        li.footer-menu__item.footer-menu__item--border-none: a(href="#faqs").footer-menu__link FAQS
+        li.footer-menu__item.footer-menu__item--border-none: a(href="#contact").footer-menu__link Contact
+      .social-icons
+        img(src="/assets/images/icon-facebook.svg", alt="").social-icons__img
+        img(src="/assets/images/icon-twitter.svg", alt="").social-icons__img
   script(src="js/scripts-min.js")

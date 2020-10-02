@@ -18,7 +18,8 @@
   }
 }
 
-.main-menu {
+.main-menu,
+.footer-menu {
   position: relative;
   list-style: none;
   padding-left: 0;
@@ -37,6 +38,13 @@
     &:last-child {
       border-bottom: 1px solid var(--grayish-blue);
       margin-bottom: 2rem;
+    }
+
+    &--border-none {
+      border: none;
+      &:last-child {
+        border-bottom: none;
+      }
     }
   }
 
