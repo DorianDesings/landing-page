@@ -63,6 +63,10 @@
       --svg-top: 60px;
       --svg-width: 300px;
       --svg-height: 220px;
+
+      .tabs__title {
+        margin-top: 4rem;
+      }
     }
     &::before {
       content: '';
