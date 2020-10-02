@@ -35,25 +35,28 @@ html(lang="en")
     section#features.section--second
       h2.section__title Features
       p.section__text Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
-      ul.tabs
-        li.tabs__item Simple Bookmarking
-          article.tabs__content
-            img(src="", alt="")
-            h2.tabs__title Bookmark in one click
-            p.tabs__text Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
-            button.button More Info
+      ul#tabs.tabs
+        li.tabs__item.tabs__item--active Simple Bookmarking
         li.tabs__item Speedy Searching
-          article.tabs__content
-            img(src="", alt="")
-            h2.tabs__title Intelligent search
-            p.tabs__text Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
-            button.button More Info
         li.tabs__item Easy Sharing
-          article.tabs__content
-            img(src="", alt="")
-            h2.tabs__title Share your bookmarks
-            p.tabs__text Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.
-            button.button More Info
+
+      .tabs__container
+        article.tabs__content.tabs__content--first.tabs__content--active
+          img(src="/assets/images/illustration-features-tab-1.svg", alt="features tab 1").tabs__image
+          h2.tabs__title Bookmark in one click
+          p.tabs__text Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
+          button.button.button--purple More Info
+          
+        article.tabs__content.tabs__content--second
+          img(src="/assets/images/illustration-features-tab-2.svg", alt="features tab 2")
+          h2.tabs__title Intelligent search
+          p.tabs__text Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
+          button.button.button--purple More Info
+        article.tabs__content.tabs__content--third
+          img(src="/assets/images/illustration-features-tab-3.svg", alt="features tab 3")
+          h2.tabs__title Share your bookmarks
+          p.tabs__text Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.
+          button.button.button--purple More Info
     section#download.section.section--third
       h2.section__title Download the extension
       p.section__text We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.
@@ -82,15 +85,21 @@ html(lang="en")
     section#faqs.section.section--fourth
       h2.section__title Frequently Asked Questions
       p.section__text Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.
-      .accordion
+      #accordion.accordion
         .accordion__item
-          h3.accordion__title What is Bookmark
-          p.accordion__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum  quam ornare mattis.
+          .accordion__header
+            h3.accordion__title What is Bookmark
+            img(src="/assets/images/icon-arrow.svg", alt="icon arrow").accordion__image
+          p.accordion__text.accordion__text--active Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum  quam ornare mattis.
         .accordion__item
-          h3.accordion__title How can I request a new browser?
+          .accordion__header
+            h3.accordion__title How can I request a new browser?
+            img(src="/assets/images/icon-arrow.svg", alt="icon arrow").accordion__image
           p.accordion__text Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
         .accordion__item
-          h3.accordion__title What is Bookmark
+          .accordion__header
+            h3.accordion__title What is Bookmark
+            img(src="/assets/images/icon-arrow.svg", alt="icon arrow").accordion__image
           p.accordion__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum  quam ornare mattis.
         button.button More Info
     footer.footer

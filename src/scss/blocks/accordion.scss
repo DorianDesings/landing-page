@@ -1,0 +1,32 @@
+.accordion {
+  padding: 0 1.5rem;
+
+  &__item {
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--grayish-blue);
+    padding-bottom: 0.5rem;
+    margin: 2rem 0;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 1.1rem;
+  }
+
+  &__text {
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+
+    &--active {
+      max-height: 500px;
+      overflow: auto;
+    }
+  }
+}
