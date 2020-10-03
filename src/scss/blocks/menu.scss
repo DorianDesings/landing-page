@@ -16,6 +16,17 @@
   &--show {
     transform: translateY(0);
   }
+
+  @media screen and (min-width: 768px) {
+    position: initial;
+    transform: translateY(0);
+    z-index: 100;
+    background-color: transparent;
+    width: 600px;
+    height: 100px;
+    flex-direction: row;
+    padding: 0;
+  }
 }
 
 .main-menu,
@@ -46,6 +57,15 @@
         border-bottom: none;
       }
     }
+
+    @media screen and (min-width: 768px) {
+      border: none;
+      &:last-child {
+        border-bottom: none;
+        margin: 0;
+        margin-right: 3rem;
+      }
+    }
   }
 
   &__link {
@@ -55,5 +75,18 @@
     letter-spacing: 3px;
     font-weight: 300;
     font-size: 1.3rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1rem;
+      color: var(--very-dark-blue);
+      &:hover {
+        color: var(--soft-red);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
   }
 }

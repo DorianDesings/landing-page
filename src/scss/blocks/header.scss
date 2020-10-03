@@ -4,4 +4,12 @@
   align-items: center;
   width: 100%;
   padding: 1rem;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 65% 25%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--white);
+  }
 }

@@ -10,12 +10,21 @@
   padding: 2rem;
   background-color: var(--white);
 
-  &--show {
-    filter: invert(1) brightness(100);
-    background-color: transparent;
-
-    & .top-bar__icon {
+  @media screen and (max-width: 768px) {
+    &--show {
       filter: invert(1) brightness(100);
+      background-color: transparent;
+
+      & .top-bar__icon {
+        filter: invert(1) brightness(100);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    position: initial;
+    &__icon {
+      display: none;
     }
   }
 }

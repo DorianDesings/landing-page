@@ -3,9 +3,18 @@
   background: none;
   padding: 1rem 0;
   color: var(--white);
-  border: 2px solid var(--white);
+  border: 2px solid;
   border-radius: 5px;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 1.3rem;
+
+  @media screen and (min-width: 768px) {
+    --white: var(--very-dark-blue);
+    cursor: pointer;
+    &:hover {
+      color: var(--soft-red);
+      border: 2px solid;
+    }
+  }
 }
