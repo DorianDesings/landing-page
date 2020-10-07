@@ -22,10 +22,12 @@
     transform: translateY(0);
     z-index: 100;
     background-color: transparent;
-    width: 600px;
+    width: 550px;
     height: 100px;
     flex-direction: row;
     padding: 0;
+    justify-self: right;
+    margin-right: 72px;
   }
 }
 
@@ -78,6 +80,7 @@
 
     @media screen and (min-width: 768px) {
       font-size: 1rem;
+      font-weight: 400;
       color: var(--very-dark-blue);
       &:hover {
         color: var(--soft-red);

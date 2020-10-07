@@ -3,30 +3,59 @@
   justify-content: space-around;
   padding: 0 0.5rem;
   margin-bottom: 7rem;
+
+  &--left {
+    @media screen and (min-width: 768px) {
+      justify-content: start;
+      padding: 0;
+
+      & .button--purple {
+        margin-right: 1rem;
+      }
+    }
+  }
 }
 
 .button-container {
   width: 100%;
-  text-align: center;
+  &--center {
+    text-align: center;
+  }
+  &--left {
+    text-align: left;
+  }
 }
 
 .button {
   background: none;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 5px;
   border: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s, border 0.3s;
+  @media screen and (min-width: 768px) {
+    &:hover {
+      border: 2px solid;
+      background-color: transparent;
+      color: var(--color-hover);
+    }
+  }
 
   &--white {
     background-color: var(--dirty-white);
     color: var(--very-dark-blue);
     font-weight: 400;
     box-shadow: 9px 10px 11px -4px rgb(218, 218, 218);
+    --color-hover: var(--very-dark-blue);
   }
 
   &--purple {
     background-color: var(--soft-blue);
     color: var(--white);
     font-weight: 400;
+    --color-hover: var(--soft-blue);
+    box-shadow: 0 6px 10px 3px rgba($very-dark-blue, 0.24);
   }
 
   &--red {

@@ -1,4 +1,13 @@
-.browser-card {
+.cards {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 11rem;
+    width: 1440px;
+  }
+}
+
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,5 +29,16 @@
     color: var(--grayish-blue);
     margin-bottom: 2.2rem;
     font-weight: 400;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+
+    &:first-child {
+      top: -60px;
+    }
+    &:last-child {
+      bottom: -60px;
+    }
   }
 }

@@ -19,6 +19,18 @@
     position: relative;
     display: flex;
     justify-content: center;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+      border: none;
+      border-bottom: 1px solid var(--grayish-blue);
+    }
+
+    &:hover {
+      @media screen and (min-width: 768px) {
+        color: var(--soft-red);
+      }
+    }
 
     &--active::after {
       content: '';
@@ -29,6 +41,9 @@
       height: 5px;
       background-color: red;
       border-radius: 3px;
+      @media screen and (min-width: 768px) {
+        width: 100%;
+      }
     }
 
     &:last-of-type {
@@ -46,6 +61,11 @@
     position: absolute;
     transform: scale(0);
     transition: transform 0.4s;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      width: 1250px;
+    }
 
     &--first {
       --svg-top: 32px;
@@ -90,5 +110,32 @@
 
   &__image {
     margin-bottom: 4rem;
+  }
+
+  &__text-container {
+    text-align: left;
+    width: 375px;
+  }
+
+  &__title {
+    @media screen and (min-width: 768px) {
+      letter-spacing: 2px;
+      font-weight: 400;
+    }
+  }
+
+  &__text {
+    @media screen and (min-width: 768px) {
+      line-height: 1.5;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

@@ -21,107 +21,110 @@ html(lang="en")
         .social-icons
           img(src="/assets/images/icon-facebook.svg", alt="").social-icons__img
           img(src="/assets/images/icon-twitter.svg", alt="").social-icons__img
+    main.main
+      section.section.section--first
+        .section__item.section__item--img
+          img(src="/assets/images/illustration-hero.svg", alt="").section__img--first
+        .section__item.section__item--text
+          h1.section__title.section__title--first A Simple Bookmark Manager
+          p.section__text.section__text--first A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.
+          .buttons.buttons--left
+            button.button.button--purple Get it on Chrome
+            button.button.button--white Get it on Firefox
       
-    section.section.section--first
-      .section__item
-        img(src="/assets/images/illustration-hero.svg", alt="").section__img
-      .section__item
-        h1.section__title A Simple Bookmark Manager
-        p.section__text A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.
-        .buttons
-          button.button.button--purple Get it on Chrome
-          button.button.button--white Get it on Firefox
-     
-    section#features.section--second
-      h2.section__title Features
-      p.section__text Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
-      ul#tabs.tabs
-        li.tabs__item.tabs__item--active Simple Bookmarking
-        li.tabs__item Speedy Searching
-        li.tabs__item Easy Sharing
+      section#features.section.section--second
+        h2.section__title Features
+        p.section__text.section__text--second Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
+        ul#tabs.tabs
+          li.tabs__item.tabs__item--active Simple Bookmarking
+          li.tabs__item Speedy Searching
+          li.tabs__item Easy Sharing
 
-      .tabs__container
-        article.tabs__content.tabs__content--first.tabs__content--active
-          img(src="/assets/images/illustration-features-tab-1.svg", alt="features tab 1").tabs__image
-          h2.tabs__title Bookmark in one click
-          p.tabs__text Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
-          .button-container
-            button.button.button--purple More Info
-        article.tabs__content.tabs__content--second
-          img(src="/assets/images/illustration-features-tab-2.svg", alt="features tab 2")
-          h2.tabs__title Intelligent search
-          p.tabs__text Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
-          .button-container
-            button.button.button--purple More Info
-        article.tabs__content.tabs__content--third
-          img(src="/assets/images/illustration-features-tab-3.svg", alt="features tab 3")
-          h2.tabs__title Share your bookmarks
-          p.tabs__text Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.
-          .button-container
-            button.button.button--purple More Info
-    section#download.section.section--third
-      h2.section__title Download the extension
-      p.section__text We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.
+        .tabs__container
+          article.tabs__content.tabs__content--first.tabs__content--active
+            img(src="/assets/images/illustration-features-tab-1.svg", alt="features tab 1").tabs__image
+            .tabs__text-container
+              h2.tabs__title Bookmark in one click
+              p.tabs__text Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
+              .button-container
+                button.button.button--purple More Info
+          article.tabs__content.tabs__content--second
+            img(src="/assets/images/illustration-features-tab-2.svg", alt="features tab 2")
+            .tabs__text-container
+              h2.tabs__title Intelligent search
+              p.tabs__text Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
+              .button-container.button-container--left
+                button.button.button--purple More Info
+          article.tabs__content.tabs__content--third
+            img(src="/assets/images/illustration-features-tab-3.svg", alt="features tab 3")
+            .tabs__text-container
+              h2.tabs__title Share your bookmarks
+              p.tabs__text Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.
+              .button-container.button-container--left
+                button.button.button--purple More Info
+      section#download.section.section--third
+        h2.section__title Download the extension
+        p.section__text.section__text--cards We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.
+        .cards
+          article.card
+            img(src="/assets/images/logo-chrome.svg", alt="").card__image
+            h3.card__title Add to Chrome
+            p.card__description Minumum version 62
+            img(src="/assets/images/bg-dots.svg", alt="")
+            button.button.button--purple Add & install Extension
 
-      article.browser-card
-        img(src="/assets/images/logo-chrome.svg", alt="").browser-card__image
-        h3.browser-card__title Add to Chrome
-        p.browser-card__description Minumum version 62
-        img(src="/assets/images/bg-dots.svg", alt="")
-        button.button.button--purple Add & install Extension
+          article.card
+            img(src="/assets/images/logo-firefox.svg", alt="").card__image
+            h3.card__title Add to Firefox
+            p.card__description Minumum version 55
+            img(src="/assets/images/bg-dots.svg", alt="")
+            button.button.button--purple Add & install Extension
 
-      article.browser-card
-        img(src="/assets/images/logo-firefox.svg", alt="").browser-card__image
-        h3.browser-card__title Add to Firefox
-        p.browser-card__description Minumum version 55
-        img(src="/assets/images/bg-dots.svg", alt="")
-        button.button.button--purple Add & install Extension
+          article.card
+            img(src="/assets/images/logo-opera.svg", alt="").card__image
+            h3.card__title Add to Opera
+            p.card__description Minumum version 46
+            img(src="/assets/images/bg-dots.svg", alt="")
+            button.button.button--purple Add & install Extension
 
-      article.browser-card
-        img(src="/assets/images/logo-opera.svg", alt="").browser-card__image
-        h3.browser-card__title Add to Opera
-        p.browser-card__description Minumum version 46
-        img(src="/assets/images/bg-dots.svg", alt="")
-        button.button.button--purple Add & install Extension
-
-    section#faqs.section.section--fourth
-      h2.section__title Frequently Asked Questions
-      p.section__text Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.
-      #accordion.accordion
-        .accordion__item
-          h3.accordion__title What is Bookmark
-          .accordion__text
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum  quam ornare mattis.
-        .accordion__item
-          h3.accordion__title How can I request a new browser?
-          .accordion__text
-            p Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-        .accordion__item
-          h3.accordion__title What is Bookmark
-          .accordion__text
-            p Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.
-        .accordion__item
-          h3.accordion__title What about other Chromium browsers?
-          .accordion__text
-            p Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.
-      .button-container
-        button.button.button--purple More Info
-    footer.footer
-      h3.footer__title 35,000+ already joined
-      p.footer__subtitle Stay up-to-date with what we’re doing
-      form#form.form
-        .form__field
-          input(type="email" placeholder="Enter your email address").form__input
-          div.form__input-error Whoops, make sure it's an email
-        button.button.button--red Contact Us
-    nav.footer__menu
-      .logo
-        img(src="/assets/images/logo-bookmark.svg", alt="logo").logo__img
-      ul.footer-menu
-        li.footer-menu__item.footer-menu__item--border-none: a(href="#features").footer-menu__link Features
-        li.footer-menu__item.footer-menu__item--border-none: a(href="#faqs").footer-menu__link FAQS
-        li.footer-menu__item.footer-menu__item--border-none: a(href="#contact").footer-menu__link Contact
-      .social-icons
-        img(src="/assets/images/icon-facebook.svg", alt="").social-icons__img
-        img(src="/assets/images/icon-twitter.svg", alt="").social-icons__img
+      section#faqs.section.section--fourth
+        h2.section__title Frequently Asked Questions
+        p.section__text Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.
+        #accordion.accordion
+          .accordion__item
+            h3.accordion__title What is Bookmark
+            .accordion__text
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum  quam ornare mattis.
+          .accordion__item
+            h3.accordion__title How can I request a new browser?
+            .accordion__text
+              p Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+          .accordion__item
+            h3.accordion__title What is Bookmark
+            .accordion__text
+              p Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.
+          .accordion__item
+            h3.accordion__title What about other Chromium browsers?
+            .accordion__text
+              p Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.
+        .button-container.button-container--center
+          button.button.button--purple More Info
+      footer.footer
+        h3.footer__title 35,000+ already joined
+        p.footer__subtitle Stay up-to-date with what we’re doing
+        form#form.form
+          .form__field
+            input(type="email" placeholder="Enter your email address").form__input
+            div.form__input-error Whoops, make sure it's an email
+          button.button.button--red Contact Us
+      nav.footer__menu
+        .logo
+          img(src="/assets/images/logo-bookmark.svg", alt="logo").logo__img
+        ul.footer-menu
+          li.footer-menu__item.footer-menu__item--border-none: a(href="#features").footer-menu__link Features
+          li.footer-menu__item.footer-menu__item--border-none: a(href="#faqs").footer-menu__link FAQS
+          li.footer-menu__item.footer-menu__item--border-none: a(href="#contact").footer-menu__link Contact
+        .social-icons
+          img(src="/assets/images/icon-facebook.svg", alt="").social-icons__img
+          img(src="/assets/images/icon-twitter.svg", alt="").social-icons__img
   script(src="js/scripts-min.js")
