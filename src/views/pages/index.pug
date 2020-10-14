@@ -18,7 +18,7 @@ html(lang="en")
           li.main-menu__item: a(href="#faqs").main-menu__link FAQS
           li.main-menu__item: a(href="#contact").main-menu__link Contact
         button#login-button.login-button Login
-        .social-icons
+        .social-icons-header
           img(src="/assets/images/icon-facebook.svg", alt="").social-icons__img
           img(src="/assets/images/icon-twitter.svg", alt="").social-icons__img
     main.main
@@ -89,7 +89,7 @@ html(lang="en")
 
       section#faqs.section.section--fourth
         h2.section__title Frequently Asked Questions
-        p.section__text Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.
+        p.section__text.section__text--center Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.
         #accordion.accordion
           .accordion__item
             h3.accordion__title What is Bookmark
@@ -110,21 +110,22 @@ html(lang="en")
         .button-container.button-container--center
           button.button.button--purple More Info
       footer.footer
-        h3.footer__title 35,000+ already joined
-        p.footer__subtitle Stay up-to-date with what we’re doing
-        form#form.form
-          .form__field
-            input(type="email" placeholder="Enter your email address").form__input
-            div.form__input-error Whoops, make sure it's an email
-          button.button.button--red Contact Us
-      nav.footer__menu
-        .logo
-          img(src="/assets/images/logo-bookmark.svg", alt="logo").logo__img
-        ul.footer-menu
-          li.footer-menu__item.footer-menu__item--border-none: a(href="#features").footer-menu__link Features
-          li.footer-menu__item.footer-menu__item--border-none: a(href="#faqs").footer-menu__link FAQS
-          li.footer-menu__item.footer-menu__item--border-none: a(href="#contact").footer-menu__link Contact
-        .social-icons
-          img(src="/assets/images/icon-facebook.svg", alt="").social-icons__img
-          img(src="/assets/images/icon-twitter.svg", alt="").social-icons__img
+        .footer__container
+          h3.footer__title 35,000+ already joined
+          p.footer__subtitle Stay up-to-date with what we’re doing
+          form#form.form
+            .form__field
+              input(type="email" placeholder="Enter your email address").form__input
+              div.form__input-error Whoops, make sure it's an email
+              button.button.button--red Contact Us
+        nav.footer__menu
+          .logo
+            img(src="/assets/images/logo-bookmark.svg", alt="logo").logo__img
+          ul.footer-menu
+            li.footer-menu__item.footer-menu__item--border-none: a(href="#features").footer-menu__link Features
+            li.footer-menu__item.footer-menu__item--border-none: a(href="#faqs").footer-menu__link FAQS
+            li.footer-menu__item.footer-menu__item--border-none: a(href="#contact").footer-menu__link Contact
+          .social-icons-footer
+            img(src="/assets/images/icon-facebook.svg", alt="").social-icons__img
+            img(src="/assets/images/icon-twitter.svg", alt="").social-icons__img
   script(src="js/scripts-min.js")

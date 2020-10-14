@@ -5,6 +5,12 @@
   color: #fff;
   text-align: center;
 
+  &__container {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &__title {
     font-weight: 300;
     text-transform: uppercase;
@@ -24,6 +30,10 @@
     & .logo {
       filter: invert(1) brightness(100);
       background-color: transparent;
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
     }
   }
 }

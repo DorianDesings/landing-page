@@ -2,6 +2,13 @@
   position: relative;
   &__field {
     margin-bottom: 3rem;
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
   &__input {
@@ -38,6 +45,10 @@
       line-height: 2.5;
       font-style: italic;
       font-size: 0.8rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 70%;
     }
   }
 }
