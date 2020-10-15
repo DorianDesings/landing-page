@@ -1,46 +1,46 @@
 .accordion {
-  padding: 0 1.5rem;
-  margin-bottom: 2rem;
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
 
-  &__title {
-    font-weight: 300;
-    font-size: 1.1rem;
-    display: flex;
-    justify-content: space-between;
+    &__title {
+        font-weight: 300;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: space-between;
 
-    &::after {
-      content: url('/assets/images/icon-arrow.svg');
-      transform: rotate(0);
-      filter: hue-rotate(0);
-      transition: transform 0.2s, filter 0.2s;
+        &::after {
+            content: url("/assets/images/icon-arrow.svg");
+            transform: rotate(0);
+            filter: hue-rotate(0);
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        &--active::after {
+            transform: rotate(180deg);
+            filter: hue-rotate(120deg);
+        }
     }
 
-    &--active::after {
-      transform: rotate(180deg);
-      filter: hue-rotate(120deg);
+    &__text {
+        margin: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s;
+        border-bottom: 1px solid var(--grayish-blue);
+
+        & p {
+            padding: 2rem 0;
+        }
+
+        &--active {
+            max-height: 500px;
+            overflow: auto;
+        }
     }
-  }
 
-  &__text {
-    margin: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s;
-    border-bottom: 1px solid var(--grayish-blue);
-
-    & p {
-      padding: 2rem 0;
+    @media screen and (min-width: 768px) {
+        width: 55%;
+        margin-left: auto;
+        margin-right: auto;
     }
-
-    &--active {
-      max-height: 500px;
-      overflow: auto;
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 55%;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
