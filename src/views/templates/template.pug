@@ -1,0 +1,22 @@
+block config
+  include ../config/vars
+doctype html
+html(lang="en" prefix='og: http://ogp.me/ns/website#')
+    head
+        title= pageTitle
+
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        link(href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;1,400&display=swap" rel="stylesheet")
+        link(rel="stylesheet", href="css/styles.css")
+
+        block SEO
+    body
+        header
+          block header
+        main
+          block main
+        footer
+          block footer
+        script(src="js/scripts-min.js")
