@@ -1,0 +1,20 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": ["airbnb-base"],
+    "parserOptions": {
+        "ecmaVersion": 12
+    },
+    "rules": {
+        "indent": "off",
+        "eol-last": "off",
+        "editorconfig/editorconfig": "off",
+        "padded-blocks": ["error", "always"],
+        "comma-dangle": ["error", "only-multiline"],
+        "no-multiple-empty-lines": ["error", { "max": 1 }],
+        "no-console": ["error", { "allow": ["warn", "error"] }]
+    },
+    "plugins": ["editorconfig"]
+}
