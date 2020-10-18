@@ -1,106 +1,100 @@
-//HTML
-import htmlmin from 'gulp-htmlmin';
+// HTML
+// import htmlmin from 'gulp-htmlmin';
 
-//CSS
+// CSS
 import postcss from 'gulp-postcss';
 import cssnano from 'cssnano';
 import autoprefixer from 'autoprefixer';
 
-//JavaScript
+// JavaScript
 import gulp from 'gulp';
 import babel from 'gulp-babel';
 import terser from 'gulp-terser';
 
-//PUG
+// PUG
 import pug from 'gulp-pug';
 
-//SASS
+// SASS
 import sass from 'gulp-sass';
 
-//Common
+// Common
 import concat from 'gulp-concat';
 
-//Clean CSS
+// Clean CSS
 import clean from 'gulp-purgecss';
 
-//Caché bust
+// Caché bust
 import cacheBust from 'gulp-cache-bust';
 
-//Optimización imágenes
-import imagemin from 'gulp-imagemin';
+// Optimización imágenes
+// import imagemin from 'gulp-imagemin';
 
-//Browser sync
+// Browser sync
 import { init as server, stream, reload } from 'browser-sync';
 
-//Plumber
+// Plumber
 import plumber from 'gulp-plumber';
 
-//Typescript
-import ts from 'gulp-typescript';
+// Typescript
+// import ts from 'gulp-typescript';
 
 const production = true;
 
-//Variables/constantes
+// Variables/constantes
 const cssPlugins = [cssnano(), autoprefixer()];
 
-gulp.task('babel', () => {
-  return gulp
+gulp.task('babel', () => gulp
     .src('./src/js/*.js')
     .pipe(plumber())
     .pipe(concat('scripts-min.js'))
     .pipe(babel())
     .pipe(terser())
-    .pipe(gulp.dest('./docs/js'));
-});
+    .pipe(gulp.dest('./docs/js')));
 
-gulp.task('views', () => {
-  return gulp
+gulp.task('views', () => gulp
     .src('./src/views/pages/*.pug')
     .pipe(plumber())
     .pipe(
-      pug({
-        pretty: production ? false : true
-      })
+        pug({
+            pretty: !production
+        })
     )
     .pipe(
-      cacheBust({
-        type: 'timestamp'
-      })
+        cacheBust({
+            type: 'timestamp'
+        })
     )
-    .pipe(gulp.dest('./docs'));
-});
+    .pipe(gulp.dest('./docs')));
 
-gulp.task('sass', () => {
-  return gulp
+gulp.task('sass', () => gulp
     .src('./src/scss/styles.scss')
     .pipe(plumber())
     .pipe(
-      sass({
-        outputStyle: 'compressed'
-      })
+        sass({
+            outputStyle: 'compressed'
+        })
     )
     .pipe(postcss(cssPlugins))
     .pipe(gulp.dest('./docs/css'))
-    .pipe(stream());
-});
+    .pipe(stream()));
 
-gulp.task('clean', () => {
-  return gulp
+gulp.task('clean', () => gulp
     .src('./docs/css/styles.css')
     .pipe(plumber())
     .pipe(
-      clean({
-        content: ['./docs/*.html']
-      })
+        clean({
+            content: ['./docs/*.html']
+        })
     )
-    .pipe(gulp.dest('./docs/css'));
-});
+    .pipe(gulp.dest('./docs/css')));
 
 gulp.task('default', () => {
-  server({
-    server: './docs'
-  });
-  gulp.watch('./src/views/**/*.pug', gulp.series('views')).on('change', reload);
-  gulp.watch('./src/scss/**/*.scss', gulp.series('sass'));
-  gulp.watch('./src/js/*.js', gulp.series('babel')).on('change', reload);
+
+    server({
+        server: './docs'
+    });
+    gulp.watch('./src/views/**/*.pug', gulp.series('views')).on('change', reload);
+    gulp.watch('./src/scss/**/*.scss', gulp.series('sass'));
+    gulp.watch('./src/js/*.js', gulp.series('babel')).on('change', reload);
+
 });

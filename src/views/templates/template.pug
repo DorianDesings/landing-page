@@ -1,5 +1,6 @@
 block config
-  include ../config/vars
+  include ../config/vars/global_vars
+  include ../config/vars/imagesUrls
 doctype html
 html(lang="en" prefix='og: http://ogp.me/ns/website#')
     head
@@ -12,11 +13,11 @@ html(lang="en" prefix='og: http://ogp.me/ns/website#')
         link(rel="stylesheet", href="css/styles.css")
 
         block SEO
-    body
-        header
-          block header
-        main
-          block main
-        footer
-          block footer
+    body(id="body")
+        block header
+
+        block main
+
+        block footer
+
         script(src="js/scripts-min.js")
