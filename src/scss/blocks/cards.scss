@@ -1,44 +1,44 @@
 .cards {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 11rem;
-    width: 1440px;
-  }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 11rem;
+        width: 1440px;
+    }
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 15px;
-  box-shadow: 0 6px 10px 3px rgba($soft-blue, 0.14);
-  margin-bottom: 3rem;
-  padding: 3rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px 3px rgba($soft-blue, 0.14);
+    margin-bottom: 3rem;
+    padding: 3rem 1.5rem 1.5rem;
 
-  .button {
-    margin-top: 1.5rem;
-  }
-
-  &__title {
-    margin: 0;
-    margin-top: 2rem;
-  }
-
-  &__description {
-    color: var(--grayish-blue);
-    margin-bottom: 2.2rem;
-    font-weight: 400;
-  }
-
-  @media screen and (min-width: 768px) {
-    position: relative;
-
-    &:first-child {
-      top: -60px;
+    .button {
+        margin-top: 1.5rem;
     }
-    &:last-child {
-      bottom: -60px;
+
+    &__title {
+        margin: 0;
+        margin-top: 2rem;
     }
-  }
+
+    &__description {
+        color: var(--grayish-blue);
+        margin-bottom: 2.2rem;
+        font-weight: 400;
+    }
+
+    @media screen and (min-width: 768px) {
+        position: relative;
+
+        &:first-child {
+            top: -60px;
+        }
+        &:last-child {
+            bottom: -60px;
+        }
+    }
 }

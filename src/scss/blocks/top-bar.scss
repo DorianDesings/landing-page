@@ -1,31 +1,31 @@
 .top-bar {
-  display: grid;
-  grid-template-columns: 90% 10%;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  padding: 2rem;
-  background-color: var(--white);
+    display: grid;
+    grid-template-columns: 90% 10%;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 2rem;
+    background-color: var(--white);
 
-  @media screen and (max-width: 768px) {
-    &--show {
-      filter: invert(1) brightness(100);
-      background-color: transparent;
+    @media screen and (max-width: 768px) {
+        &--show {
+            filter: invert(1) brightness(100);
+            background-color: transparent;
 
-      & .top-bar__icon {
-        filter: invert(1) brightness(100);
-      }
+            & .top-bar__icon {
+                filter: invert(1) brightness(100);
+            }
+        }
     }
-  }
 
-  @media screen and (min-width: 768px) {
-    position: initial;
-    padding: 2rem 0;
-    &__icon {
-      display: none;
+    @media screen and (min-width: 768px) {
+        position: initial;
+        padding: 2rem 0;
+        &__icon {
+            display: none;
+        }
     }
-  }
 }

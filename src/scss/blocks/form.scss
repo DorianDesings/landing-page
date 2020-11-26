@@ -1,54 +1,54 @@
 .form {
-  position: relative;
-  &__field {
-    margin-bottom: 3rem;
-
-    @media screen and (min-width: 768px) {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-  }
-
-  &__input {
-    line-height: 3rem;
-    width: 100%;
-    padding-left: 1rem;
     position: relative;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    z-index: 10;
+    &__field {
+        margin-bottom: 3rem;
 
-    &:invalid {
-      box-shadow: 0 0 0 4px var(--soft-red);
-      background-image: url('/assets/images/icon-error.svg');
-      background-repeat: no-repeat;
-      background-position: 93% center;
-
-      & + .form__input-error {
-        display: flex;
-      }
+        @media screen and (min-width: 768px) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 
-    &-error {
-      position: absolute;
-      display: none;
-      padding-left: 10px;
-      padding-top: 10px;
-      border-radius: 5px;
-      background-color: var(--soft-red);
-      width: 304px;
-      top: 40px;
-      left: -4px;
-      line-height: 2.5;
-      font-style: italic;
-      font-size: 0.8rem;
-    }
+    &__input {
+        line-height: 3rem;
+        width: 100%;
+        padding-left: 1rem;
+        position: relative;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        z-index: 10;
 
-    @media screen and (min-width: 768px) {
-      width: 70%;
+        &:invalid {
+            box-shadow: 0 0 0 4px var(--soft-red);
+            background-image: url("/assets/images/icon-error.svg");
+            background-repeat: no-repeat;
+            background-position: 93% center;
+
+            & + .form__input-error {
+                display: flex;
+            }
+        }
+
+        &-error {
+            position: absolute;
+            display: none;
+            padding-left: 10px;
+            padding-top: 10px;
+            border-radius: 5px;
+            background-color: var(--soft-red);
+            width: 304px;
+            top: 40px;
+            left: -4px;
+            line-height: 2.5;
+            font-style: italic;
+            font-size: 0.8rem;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 70%;
+        }
     }
-  }
 }

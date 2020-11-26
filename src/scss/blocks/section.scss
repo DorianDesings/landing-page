@@ -1,106 +1,106 @@
 .section {
-  margin-top: 6rem;
+    margin-top: 6rem;
 
-  &__item {
-    position: relative;
-    &--text {
-      @media screen and (min-width: 768px) {
-        width: 450px;
-      }
+    &__item {
+        position: relative;
+        &--text {
+            @media screen and (min-width: 768px) {
+                width: 450px;
+            }
+        }
     }
-  }
 
-  &__title,
-  &__text {
-    text-align: center;
-    font-weight: 400;
-  }
+    &__title,
+    &__text {
+        text-align: center;
+        font-weight: 400;
+    }
 
-  &__title {
-    font-size: 2rem;
+    &__title {
+        font-size: 2rem;
+        &--first {
+            text-align: left;
+        }
+    }
+
+    &__text {
+        padding: 0 1.5rem;
+        font-weight: 400;
+        color: var(--grayish-blue);
+        line-height: 1.7;
+        margin-bottom: 2.5rem;
+        @media screen and (min-width: 768px) {
+            padding: 0;
+
+            &--cards {
+                width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 8rem;
+            }
+
+            &--center {
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        &--second {
+            @media screen and (min-width: 768px) {
+                margin-left: auto;
+                margin-right: auto;
+                width: 500px;
+            }
+        }
+    }
+
+    &__img--first {
+        @media screen and (min-width: 768px) {
+            position: relative;
+            right: 2rem;
+        }
+    }
+
     &--first {
-      text-align: left;
-    }
-  }
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 65px;
+            right: 0;
+            display: block;
+            width: 280px;
+            height: 200px;
+            background-color: var(--soft-blue);
+            border-bottom-left-radius: 100px;
+            z-index: -1;
 
-  &__text {
-    padding: 0 1.5rem;
-    font-weight: 400;
-    color: var(--grayish-blue);
-    line-height: 1.7;
-    margin-bottom: 2.5rem;
-    @media screen and (min-width: 768px) {
-      padding: 0;
-
-      &--cards {
-        width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 8rem;
-      }
-
-      &--center {
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-      }
+            @media screen and (min-width: 768px) {
+                height: 350px;
+                top: 150px;
+                width: 500px;
+                border-bottom-left-radius: 175px;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
     }
 
     &--second {
-      @media screen and (min-width: 768px) {
-        margin-left: auto;
-        margin-right: auto;
-        width: 500px;
-      }
+        @media screen and (min-width: 768px) {
+            flex-direction: column;
+        }
     }
-  }
 
-  &__img--first {
-    @media screen and (min-width: 768px) {
-      position: relative;
-      right: 2rem;
+    &--third {
+        margin: 0 2rem;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
-  }
-
-  &--first {
-    position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      top: 65px;
-      right: 0;
-      display: block;
-      width: 280px;
-      height: 200px;
-      background-color: var(--soft-blue);
-      border-bottom-left-radius: 100px;
-      z-index: -1;
-
-      @media screen and (min-width: 768px) {
-        height: 350px;
-        top: 150px;
-        width: 500px;
-        border-bottom-left-radius: 175px;
-      }
-    }
-    @media screen and (min-width: 768px) {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-    }
-  }
-
-  &--second {
-    @media screen and (min-width: 768px) {
-      flex-direction: column;
-    }
-  }
-
-  &--third {
-    margin: 0 2rem;
-    @media screen and (min-width: 768px) {
-      display: flex;
-      flex-direction: column;
-    }
-  }
 }
